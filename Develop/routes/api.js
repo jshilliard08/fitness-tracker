@@ -11,3 +11,14 @@ router.post("/api/workouts", ({ body }, res) => {
       res.status(400).json(err);
     });
 });
+//Get workout by ID
+
+router.get("/api/workouts", (req, res) => {
+    Workout.aggregate([ { $addFields: { totalDuration: { $sum: "$exercises.duration" } } } ])  
+    .then(dbWorkout => {
+      res.json(dbWorkout);
+    })
+    .catch((err) => {
+      res.status(400).json(err);
+    });
+  })
