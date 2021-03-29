@@ -22,3 +22,19 @@ router.get("/api/workouts", (req, res) => {
       res.status(400).json(err);
     });
   })
+  
+  // look up .aggregate for mongoose in order to get duration
+
+  router.put("/api/workouts/:id", ({ params, body }, res) => {
+    Workout.findByIdAndUpdate(params.id,
+      { $push: { exercises: body } },
+      // { new: true } 
+      )
+      .then(dbWorkout => {
+        res.json(dbWorkout);
+      })
+      .catch((err) => {
+        res.status(400).json(err);
+      });
+  });
+  
