@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const express = require("express");
 const path = require("path");
 
-const PORT = 3000;
+const PORT = process.env.PORT || 8080;
 const app = express();
 
 app.use(express.json());
@@ -28,8 +28,3 @@ app.use(require("./routes/html.js"))
 app.listen(PORT, () => {
     console.log(`App listening on port ${PORT}!`);
   });
-
-
-app.listen(PORT,()=>{
-    console.log(`My app is running on ${PORT}`);
-})
