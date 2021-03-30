@@ -5,7 +5,7 @@
 
 ## DEMO/Screenshot
 
-![](Fitness Tracker.gif)
+
 
 <img src="assets\fitness-tracker.PNG">
 
