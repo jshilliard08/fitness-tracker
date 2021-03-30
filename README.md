@@ -5,7 +5,7 @@
 
 ## DEMO/Screenshot
 
-![]("C:\Users\Jodie\Desktop\Homework\fitness-tracker\assets\Fitness Tracker.gif")
+![](assets\Fitness Tracker.gif)
 
 <img src="assets\fitness-tracker.PNG">
 
